@@ -34,7 +34,6 @@ public interface Aggregator {
    * {@code Aggregator}.
    *
    * @param aggregator value to merge into.
-   *
    * @since 0.3.0
    */
   void mergeToAndReset(Aggregator aggregator);
@@ -46,7 +45,6 @@ public interface Aggregator {
    * @param epochNanos the epochNanos for the {@code Point}.
    * @param labels the labels for the {@code Point}.
    * @return the {@code Point} with the value from this Aggregation.
-   *
    * @since 0.6.0
    */
   @Nullable
@@ -56,7 +54,6 @@ public interface Aggregator {
    * Updates the current aggregator with a newly recorded {@code long} value.
    *
    * @param value the new {@code long} value to be added.
-   *
    * @since 0.3.0
    */
   void recordLong(long value);
@@ -65,7 +62,6 @@ public interface Aggregator {
    * Updates the current aggregator with a newly recorded {@code double} value.
    *
    * @param value the new {@code double} value to be added.
-   *
    * @since 0.3.0
    */
   void recordDouble(double value);

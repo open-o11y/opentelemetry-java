@@ -38,7 +38,6 @@ interface Batcher {
    * Returns the {@link Aggregator} that should be used by the bindings, or observers.
    *
    * @return the {@link Aggregator} used to aggregate individual events.
-   *
    * @since 0.3.0
    */
   Aggregator getAggregator();
@@ -52,7 +51,6 @@ interface Batcher {
    *     {@code LabelSetSdk}.
    * @param mappedAggregator {@code true} if the {@code Aggregator} is still in used by a binding.
    *     If {@code false} the {@code Batcher} can reuse the {@code Aggregator} instance.
-   *
    * @since 0.6.0
    */
   void batch(Labels labelSet, Aggregator aggregator, boolean mappedAggregator);
@@ -66,7 +64,6 @@ interface Batcher {
    * or keep the internal state to produce cumulative metrics.
    *
    * @return the list of metrics batched in this Batcher.
-   *
    * @since 0.3.0
    */
   List<MetricData> completeCollectionCycle();

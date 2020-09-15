@@ -16,7 +16,8 @@
 
 package io.opentelemetry.sdk.metrics.aggregator;
 
-/** Factory class for {@link Aggregator}.
+/**
+ * Factory class for {@link Aggregator}.
  *
  * @since 0.3.0
  */
@@ -26,7 +27,6 @@ public interface AggregatorFactory {
    * Returns a new {@link Aggregator}.
    *
    * @return a new {@link Aggregator}.
-   *
    * @since 0.3.0
    */
   Aggregator getAggregator();

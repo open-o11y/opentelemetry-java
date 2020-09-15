@@ -1,0 +1,10 @@
+io.opentelemetry
+io.opentelemetry.common
+io.opentelemetry.correlationcontext
+io.opentelemetry.correlationcontext.spi
+io.opentelemetry.metrics
+io.opentelemetry.metrics.spi
+io.opentelemetry.trace
+io.opentelemetry.trace.attributes
+io.opentelemetry.trace.propagation
+io.opentelemetry.trace.spi

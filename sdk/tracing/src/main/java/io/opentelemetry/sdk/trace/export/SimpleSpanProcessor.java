@@ -155,7 +155,6 @@ public final class SimpleSpanProcessor implements SpanProcessor {
      *
      * @param configMap {@link Map} holding the configuration values.
      * @return this.
-     *
      * @since 0.5.0
      */
     @Override

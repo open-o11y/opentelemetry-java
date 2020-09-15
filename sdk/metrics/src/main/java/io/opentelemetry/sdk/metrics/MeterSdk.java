@@ -132,7 +132,7 @@ final class MeterSdk implements Meter {
   /**
    * Collects all the metric recordings that changed since the last {@link MeterSdk#collectAll()}
    * call.
-   * 
+   *
    * @since 0.5.0
    */
   Collection<MetricData> collectAll() {

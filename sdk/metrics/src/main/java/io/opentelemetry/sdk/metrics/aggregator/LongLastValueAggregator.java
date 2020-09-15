@@ -49,7 +49,6 @@ public final class LongLastValueAggregator extends AbstractAggregator {
    * Returns an {@link AggregatorFactory} that produces {@link LongLastValueAggregator} instances.
    *
    * @return an {@link AggregatorFactory} that produces {@link LongLastValueAggregator} instances.
-   *
    * @since 0.3.0
    */
   public static AggregatorFactory getFactory() {

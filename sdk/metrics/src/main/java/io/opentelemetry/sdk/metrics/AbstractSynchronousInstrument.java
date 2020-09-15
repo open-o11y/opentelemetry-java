@@ -39,7 +39,7 @@ abstract class AbstractSynchronousInstrument<B extends AbstractBoundInstrument>
     collectLock = new ReentrantLock();
   }
 
-  /** @since 0.6.0 */
+  /** Since 0.6.0 */
   public B bind(Labels labels) {
     Objects.requireNonNull(labels, "labels");
     B binding = boundLabels.get(labels);

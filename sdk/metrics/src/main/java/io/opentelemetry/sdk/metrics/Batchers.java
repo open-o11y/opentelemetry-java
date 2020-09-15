@@ -33,7 +33,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/** A collection of available Batchers.
+/**
+ * A collection of available Batchers.
  *
  * @since 0.3.0
  */

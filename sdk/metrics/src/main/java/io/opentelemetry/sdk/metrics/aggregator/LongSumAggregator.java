@@ -21,7 +21,7 @@ import io.opentelemetry.sdk.metrics.data.MetricData.LongPoint;
 import io.opentelemetry.sdk.metrics.data.MetricData.Point;
 import java.util.concurrent.atomic.AtomicLong;
 
-/** @since 0.3.0 */
+/** Since 0.3.0 */
 public final class LongSumAggregator extends AbstractAggregator {
 
   private static final long DEFAULT_VALUE = 0L;
@@ -40,7 +40,6 @@ public final class LongSumAggregator extends AbstractAggregator {
    * Returns an {@link AggregatorFactory} that produces {@link LongSumAggregator} instances.
    *
    * @return an {@link AggregatorFactory} that produces {@link LongSumAggregator} instances.
-   *
    * @since 0.3.0
    */
   public static AggregatorFactory getFactory() {
@@ -53,7 +52,7 @@ public final class LongSumAggregator extends AbstractAggregator {
     other.current.getAndAdd(this.current.getAndSet(DEFAULT_VALUE));
   }
 
-  /** @since 0.3.0 */
+  /** Since 0.3.0 */
   @Override
   public Point toPoint(long startEpochNanos, long epochNanos, Labels labels) {
     return LongPoint.create(startEpochNanos, epochNanos, labels, current.get());

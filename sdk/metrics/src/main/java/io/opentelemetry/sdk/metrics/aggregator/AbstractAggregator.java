@@ -41,7 +41,6 @@ abstract class AbstractAggregator implements Aggregator {
    * self-type.
    *
    * @param aggregator The aggregator to merge with.
-   *
    * @since 0.3.0
    */
   abstract void doMergeAndReset(Aggregator aggregator);

@@ -172,7 +172,7 @@ abstract class AbstractInstrument implements Instrument {
       return getMeterSharedState().getInstrumentRegistry().register(instrument);
     }
 
-    /** @since 0.7.0 */
+    /** Since 0.7.0 */
     protected Batcher getBatcher(InstrumentDescriptor descriptor) {
       return meterSdk.createBatcher(descriptor, meterProviderSharedState, meterSharedState);
     }
