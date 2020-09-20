@@ -93,10 +93,11 @@ public class HttpTraceContext implements TextMapPropagator {
 
     Span span = TracingContextUtils.getSpanWithoutDefault(context);
     if (span == null || !span.getContext().isValid()) {
-      return;
+      injectImpl(DefaultSpan.getContext(), carrier, setter);
     }
-
-    injectImpl(span.getContext(), carrier, setter);
+    else(
+      injectImpl(span.getContext(), carrier, setter);
+    )
   }
 
   private static <C> void injectImpl(SpanContext spanContext, C carrier, Setter<C> setter) {
