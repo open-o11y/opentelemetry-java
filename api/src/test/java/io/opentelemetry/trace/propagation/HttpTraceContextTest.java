@@ -25,6 +25,7 @@ import io.grpc.Context;
 import io.opentelemetry.context.propagation.TextMapPropagator.Getter;
 import io.opentelemetry.context.propagation.TextMapPropagator.Setter;
 import io.opentelemetry.trace.DefaultSpan;
+import io.opentelemetry.trace.Span;
 import io.opentelemetry.trace.SpanContext;
 import io.opentelemetry.trace.SpanId;
 import io.opentelemetry.trace.TraceFlags;
@@ -71,6 +72,14 @@ class HttpTraceContextTest {
     Map<String, String> carrier = new LinkedHashMap<>();
     httpTraceContext.inject(Context.current(), carrier, setter);
     assertThat(carrier).hasSize(0);
+  }
+
+  @Test
+  void inject_Nothing_defaultNoop() {
+    Map<String, String> carrier = new LinkedHashMap<>();
+    Span span = TracingContextUtils.getSpan(Context.current());
+    httpTraceContext.inject(Context.current(), carrier, setter);
+    assertThat(span).isSameAs(DefaultSpan.getInvalid());
   }
 
   @Test
