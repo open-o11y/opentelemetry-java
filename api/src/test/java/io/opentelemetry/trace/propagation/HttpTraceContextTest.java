@@ -24,8 +24,8 @@ import static org.assertj.core.api.Assertions.entry;
 import io.grpc.Context;
 import io.opentelemetry.context.propagation.TextMapPropagator.Getter;
 import io.opentelemetry.context.propagation.TextMapPropagator.Setter;
-mport io.opentelemetry.trace.Span;
 import io.opentelemetry.trace.DefaultSpan;
+import io.opentelemetry.trace.Span;
 import io.opentelemetry.trace.SpanContext;
 import io.opentelemetry.trace.SpanId;
 import io.opentelemetry.trace.TraceFlags;
@@ -73,6 +73,7 @@ class HttpTraceContextTest {
     httpTraceContext.inject(Context.current(), carrier, setter);
     assertThat(carrier).hasSize(0);
   }
+
   @Test
   void inject_Nothing_defaultNoop() {
     Map<String, String> carrier = new LinkedHashMap<>();
