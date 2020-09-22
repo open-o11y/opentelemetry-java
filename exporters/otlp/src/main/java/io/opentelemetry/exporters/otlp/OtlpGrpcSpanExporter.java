@@ -323,7 +323,7 @@ public final class OtlpGrpcSpanExporter implements SpanExporter {
         useTlsValue = getBooleanProperty(CommonProperties.KEY_USE_TLS, configMap);
       }
       if (useTlsValue != null) {
-        this.setUseTls(useTlsValue);
+        this.setUseTls(!useTlsValue);
       }
 
       String metadataValue = getStringProperty(KEY_HEADERS, configMap);

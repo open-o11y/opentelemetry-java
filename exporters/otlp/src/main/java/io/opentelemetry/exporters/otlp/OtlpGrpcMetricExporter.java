@@ -314,7 +314,7 @@ public final class OtlpGrpcMetricExporter implements MetricExporter {
         useTlsValue = getBooleanProperty(CommonProperties.KEY_USE_TLS, configMap);
       }
       if (useTlsValue != null) {
-        this.setUseTls(useTlsValue);
+        this.setUseTls(!useTlsValue);
       }
 
       String metadataValue = getStringProperty(KEY_HEADERS, configMap);
